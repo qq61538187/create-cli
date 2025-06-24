@@ -1,7 +1,7 @@
 name: Unit Test(macOS)
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   ut-mac:
     # The type of runner that the job will run on

@@ -1,7 +1,7 @@
 name: Unit Test(Windows)
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   ut-windows:
     # The type of runner that the job will run on
