@@ -1,11 +1,10 @@
-import {  ZHIAIWAN_VUE_CLI, REGISTRIES } from './constants';
 import fs from 'node:fs';
-import ini from 'ini';
 import chalk from 'chalk';
+import ini from 'ini';
+import { REGISTRIES, ZHIAIWAN_VUE_CLI } from './constants';
 export function printSuccess(message: string) {
   console.log(`${chalk.bgGreenBright(padding('SUCCESS'))} ${message}`);
 }
-
 
 export function printMessages(messages: string[]) {
   console.log(messages.join('\n'));
@@ -28,13 +27,12 @@ export function exit(error?: string) {
   process.exit(1);
 }
 
-
-export function deleteFileSync( filePath: fs.PathLike) {
+export function deleteFileSync(filePath: fs.PathLike) {
   try {
     fs.accessSync(filePath); // 检查文件是否存在
     fs.unlinkSync(filePath); // 删除文件
     console.log(`文件 ${filePath} 删除成功`);
-  } catch (err:any) {
+  } catch (err: any) {
     if (err.code === 'ENOENT') {
       console.log(`文件 ${filePath} 不存在，无需删除`);
     } else {
@@ -44,15 +42,13 @@ export function deleteFileSync( filePath: fs.PathLike) {
   }
 }
 
-export async function readFile(
-  file: fs.PathLike,
-): Promise<any> {
+export async function readFile(file: fs.PathLike): Promise<any> {
   return new Promise((resolve) => {
     if (!fs.existsSync(file)) {
       resolve(JSON.stringify(REGISTRIES)); // 如果文件不存在，返回空对象
     } else {
       try {
-        const content:string = fs.readFileSync(file, 'utf-8');
+        const content: string = fs.readFileSync(file, 'utf-8');
         resolve(content);
       } catch (error: any) {
         exit(error);
@@ -61,10 +57,9 @@ export async function readFile(
   });
 }
 
-
 export async function writeFile(
   path: fs.PathOrFileDescriptor,
-  content: string
+  content: string,
 ) {
   return new Promise<void>((resolve) => {
     try {
@@ -76,9 +71,8 @@ export async function writeFile(
   });
 }
 
-
 export async function getRegistries(): Promise<any> {
-  let customRegistries:any = await readFile(ZHIAIWAN_VUE_CLI);
+  let customRegistries: any = await readFile(ZHIAIWAN_VUE_CLI);
   customRegistries = JSON.parse(customRegistries || '[]');
   return customRegistries;
 }

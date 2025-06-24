@@ -1,12 +1,11 @@
- interface Registry {
+interface Registry {
   home: string;
   registry: string;
 }
 
-
- interface Repo {
+interface Repo {
   name: string;
   url: string;
   clone: boolean;
-  [key: string]: any; 
+  [key: string]: any;
 }
