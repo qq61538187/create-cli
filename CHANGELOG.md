@@ -1,5 +1,11 @@
 # zhiaiwan-vue-cli
 
+## 1.0.2
+
+### Patch Changes
+
+- 更新配置
+
 ## 1.0.1
 
 ### Patch Changes

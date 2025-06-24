@@ -1,6 +1,6 @@
 {
   "name": "zhiaiwan-vue-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "zhiaiwan-vue-cli is a CLI tool for creating Vue.js projects with a focus on simplicity and ease of use.",
   "bin": {
     "zhiaiwan-vue-cli": "dist/index.js"
