@@ -1,20 +1,20 @@
 # 智AI湾 vue脚手架 
 
-快速搭建自己的项目模版脚手架，其中内置了一些脚手架供用户选择。用户可以自己通过`zhiaiwan-vue-cli add  repoName   repoUrl  isClone describe`添加自己的项目模版，从而达到对自己的项目脚手架的管理
+快速搭建自己的项目模版脚手架，其中内置了一些脚手架供用户选择。用户可以自己通过`zhiaiwan-cli add  repoName   repoUrl  isClone describe`添加自己的项目模版，从而达到对自己的项目脚手架的管理
 
 ## Installation
 
 ```bash
-npm install -g zhiaiwan-vue-cli
+npm install -g zhiaiwan-cli
 # or
-yarn global add zhiaiwan-vue-cli
+yarn global add zhiaiwan-cli
 ```
 
 ## Example
 
 ```bash
-zhiaiwan-vue-cli -h
-Usage: zhiaiwan-vue-cli [options] [command]
+zhiaiwan-cli -h
+Usage: zhiaiwan-cli [options] [command]
 
 Options:
   -h, --help                           display help for command
