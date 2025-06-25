@@ -29,3 +29,13 @@ Commands:
 
 运行 rl <command> --help 查看指定命令的详细用法
 ```
+
+## 发布
+
+```sh
+yarn changeset  // 提交版本变更信息
+
+yarn changeset version //更新版本信息
+
+yarn changeset publish 发布
+```
