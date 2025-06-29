@@ -1,14 +1,14 @@
 {
-  "name": "zhiaiwan-cli",
+  "name": "@zhiaiwan/create-cli",
   "version": "1.0.0",
-  "description": "zhiaiwan-cli is a CLI tool for creating projects with a focus on simplicity and ease of use.",
+  "description": "create-cli is a CLI tool for creating projects with a focus on simplicity and ease of use.",
   "bin": {
-    "zhiaiwan-cli": "dist/index.js"
+    "create-cli": "dist/index.js"
   },
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qq61538187/zhiaiwan-cli.git"
+    "url": "git+https://github.com/qq61538187/create-cli.git"
   },
   "files": [
     "dist"
@@ -29,9 +29,9 @@
   "author": "Lixiaofei 61538187@qq.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qq61538187/zhiaiwan-cli/issues"
+    "url": "https://github.com/qq61538187/create-cli/issues"
   },
-  "homepage": "https://github.com/qq61538187/zhiaiwan-cli",
+  "homepage": "https://github.com/qq61538187/create-cli",
   "dependencies": {
     "@inquirer/checkbox": "^4.0.3",
     "@inquirer/select": "^4.0.2",

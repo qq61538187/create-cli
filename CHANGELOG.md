@@ -1,2 +1,2 @@
-# zhiaiwan-cli
+# @zhiaiwan/create-cli
 

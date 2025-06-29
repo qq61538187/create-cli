@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import chalk from 'chalk';
 import ini from 'ini';
-import { REGISTRIES, ZHIAIWAN_VUE_CLI } from './constants';
+import { REGISTRIES, CREATE_CLI } from './constants';
 export function printSuccess(message: string) {
   console.log(`${chalk.bgGreenBright(padding('SUCCESS'))} ${message}`);
 }
@@ -72,7 +72,7 @@ export async function writeFile(
 }
 
 export async function getRegistries(): Promise<any> {
-  let customRegistries: any = await readFile(ZHIAIWAN_VUE_CLI);
+  let customRegistries: any = await readFile(CREATE_CLI);
   customRegistries = JSON.parse(customRegistries || '[]');
   return customRegistries;
 }

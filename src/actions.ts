@@ -2,7 +2,7 @@ import path from 'node:path';
 import chalk from 'chalk';
 import fs from 'fs-extra';
 import inquirer from 'inquirer';
-import { ZHIAIWAN_VUE_CLI } from './constants';
+import { CREATE_CLI } from './constants';
 import Generator from './generator';
 import {
   deleteFileSync,
@@ -66,7 +66,7 @@ export const onAdd = async (
   clone: string,
   describe: string,
 ) => {
-  let customRegistries: any = await readFile(ZHIAIWAN_VUE_CLI);
+  let customRegistries: any = await readFile(CREATE_CLI);
   customRegistries = JSON.parse(customRegistries || '[]');
   customRegistries.push({
     name,
@@ -74,22 +74,22 @@ export const onAdd = async (
     clone: clone === 'true',
     describe: describe || '',
   });
-  await writeFile(ZHIAIWAN_VUE_CLI, JSON.stringify(customRegistries, null, 2));
+  await writeFile(CREATE_CLI, JSON.stringify(customRegistries, null, 2));
   printSuccess(`${chalk.green(`添加模版数据 ${name} 成功`)} `);
 };
 export const onDelete = async (index: number) => {
-  let customRegistries: any = await readFile(ZHIAIWAN_VUE_CLI);
+  let customRegistries: any = await readFile(CREATE_CLI);
   customRegistries = JSON.parse(customRegistries || '[]');
   if (customRegistries[index]) {
     customRegistries.splice(index, 1);
   }
-  await writeFile(ZHIAIWAN_VUE_CLI, JSON.stringify(customRegistries, null, 2));
+  await writeFile(CREATE_CLI, JSON.stringify(customRegistries, null, 2));
   printSuccess(`${chalk.green(`删除模版数据 ${index} 成功`)} `);
   onList();
 };
 
 export const onReset = () => {
-  deleteFileSync(ZHIAIWAN_VUE_CLI);
+  deleteFileSync(CREATE_CLI);
 };
 
 export const onHelp = () => {
